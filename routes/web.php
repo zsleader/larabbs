@@ -26,3 +26,5 @@ Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
 Route::get('example', function () {
     return view('example');
 });
+
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
